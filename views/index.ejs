@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+<body>
+    <div class="container-table">
+        <div style="background-color: none; padding: 10px;">
+            <button type="button" 
+            class="btn btn-dark" 
+            data-bs-toggle="modal" 
+            data-bs-target="#exampleModal">
+        Agregar Producto
+    </button>
+    
+        </div>
+        <table class="table">
+        <% if (products.length === 0) { %>
+        <div> No hay libros</div>
+        <% } else { %>
+        <thead class="table-dark">
+          <tr>
+            <th>id</th>
+            <th>titulo</th>
+            <th>autor</th>
+            <th>genero</th>
+            <th>anio de publicacion</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% products.forEach(element => { %>
+                <tr>
+                    <td><%= element.id %></td> <!-- Muestra el ID del libro -->
+                    <td><%= element.titulo %></td> <!-- Título del libro -->
+                    <td><%= element.autor %></td> <!-- Autor del libro -->
+                    <td><%= element.genero %></td> <!-- Género del libro -->
+                    <td><%= element.anio_publicacion %></td> <!-- Año de publicación -->
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary" onclick="openEditModal('<%=element.id %>')" ><i class="bi bi-pencil-square"></i></button>
+                            <button type="button" class="btn btn-secondary" onclick="confirmDelete('<%= element.id %>')"><i class="bi bi-trash3"></i></button>
+                        </div>
+                    </td>
+
+                </tr>
+            <% }) %>
+        </tbody>
+      </table>
+      <% } %>
+    </div>
+    <%- include('products/create.ejs') %>
+    <div id="editModalContainer"></div>
+    <%- include('partials/script.ejs') %>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="/products" method="POST">
+            <div class="mb-3">
+              <label for="titulo" class="col-form-label">Titulo:</label>
+              <input type="text" class="form-control" id="titulo" name="titulo">
+            </div>
+            <div class="mb-3">
+                <label for="autor" class="col-form-label">Autor:</label>
+                <input type="text" class="form-control" id="autor" name="autor">
+            </div>
+            <div class="mb-3">
+                <label for="genero" class="col-form-label">Genero:</label>
+                <input type="text" class="form-control" id="genero" name="genero">
+              </div>
+              <div class="mb-3">
+                <label for="anio" class="col-form-label">Anio_publicacion:</label>
+                <input type="number" class="form-control" id="anio" name="anio">
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+              </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
