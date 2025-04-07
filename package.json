@@ -28,6 +28,7 @@
     "denque": "^2.1.0",
     "depd": "^2.0.0",
     "destroy": "^1.2.0",
+    "dotenv": "^16.4.7",
     "dunder-proto": "^1.0.1",
     "ee-first": "^1.1.1",
     "ejs": "^3.1.10",
@@ -103,7 +104,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "dev":"nodemon app.js"
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
